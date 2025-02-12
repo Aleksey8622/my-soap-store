@@ -1,42 +1,83 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Сбрасываем стандартные отступы и настройки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Обеспечиваем совместимость с псевдоэлементами */
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Настройка ссылок */
+a,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Убираем стандартные маркеры у списков */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Используем кастомный шрифт */
+@font-face {
+  font-family: "StratosSkyeng";
+  src: local("StratosSkyeng"), local("StratosSkyeng"),
+    url("/fonts/StratosSkyeng.woff2") format("woff2"),
+    url("/fonts/StratosSkyeng.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Глобальные стили для body */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "StratosSkyeng", sans-serif;
+  color: #ffffff;
+  background-color: #f4f4f4; /* Добавим фоновый цвет */
+  overflow-x: hidden; /* Отключаем горизонтальный скролл */
+}
+
+/* Контейнер для всех компонентов */
+.App {
+  display: flex;
+  flex-direction: column; /* Позиционируем элементы по вертикали */
+  height: 100vh; /* Занимает всю высоту экрана */
+  margin: 0; /* Убираем внешние отступы */
+  padding: 0 20px; /* Добавляем отступы по бокам */
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .App {
+    padding: 0 15px; /* Уменьшаем отступы на планшетах */
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    margin-top: 60px; /* Уменьшаем отступ от шапки */
+    padding: 15px; /* Уменьшаем отступы внутри контента */
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .App {
+    padding: 0 10px; /* Еще меньше отступы на мобильных */
+  }
+
+  main {
+    margin-top: 50px; /* Меньше отступ на мобильных */
+    padding: 10px;    /* Еще меньше отступы внутри контента */
   }
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}

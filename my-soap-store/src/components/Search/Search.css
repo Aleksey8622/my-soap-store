@@ -1,0 +1,70 @@
+/* Общий контейнер для поиска */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Можно менять ширину */
+    max-width: 320px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрируем */
+  }
+  
+  /* Поле ввода */
+  .search-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding-left: 16px;
+    padding-right: 40px; /* Оставляем место для кнопки */
+    outline: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search-input::placeholder {
+    color: #FFFFFF; /* Цвет текста placeholder */
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Кнопка поиска */
+  .search-button {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем вертикально */
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px; /* Размер иконки */
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.icon:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Альтернативный индикатор фокуса */
+}
+.icon {
+    fill: #ffffff; /* Цвет иконки */
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease, fill 0.2s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1); /* Увеличение при наведении */
+    fill: #ffffff; /* Изменение цвета на желтый при наведении */
+  }
+  

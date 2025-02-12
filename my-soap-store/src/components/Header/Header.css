@@ -1,0 +1,59 @@
+/* src/components/Header.css */
+
+/* Шапка */
+.header {
+  display: flex;
+  justify-content: space-between; /* Располагаем элементы по краям */
+  align-items: flex-start; /* Выравниваем по центру по вертикали */
+  padding: 20px 30px; /* Добавляем отступы по бокам и сверху */
+  background-color: transparent; /* Убираем цвет фона, так как он будет заменен картинкой */
+  position: fixed; /* Фиксируем шапку наверху */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Чтобы шапка была всегда сверху */
+  background-image: url('/public/img/soap.jpeg'); /* Укажите путь к вашему изображению */
+  background-size: cover; /* Растягиваем картинку по размеру контейнера */
+  background-position: top center; /* Центрируем картинку по верхнему краю */
+  background-repeat: no-repeat; /* Не повторять картинку */
+  height: 600px; /* Высота хедера */
+  width: 100%; /* Ширина хедера на всю страницу */
+}
+
+/* Логотип */
+.logo h1 {
+  font-size: 1.8rem; /* Размер шрифта для названия */
+  color: white; /* Цвет текста */
+  margin: 0; /* Убираем отступы вокруг текста */
+}
+
+/* Бургер-меню */
+.burger-menu {
+  display: flex;
+  flex-direction: column; /* Выстраиваем иконки по вертикали */
+  justify-content: space-between; /* Место между иконками */
+  width: 30px; /* Ширина бургер-меню */
+  height: 21px; /* Высота бургер-меню */
+  cursor: pointer;
+  padding: 1px; /* Отступы внутри бургер-меню */
+}
+
+.burger-icon {
+  background-color: #fff; /* Цвет для иконок */
+  height: 3px; /* Толщина полосок */
+  width: 100%; /* Ширина полосок */
+  transition: all 0.3s ease; /* Плавное изменение для анимации */
+}
+
+/* Стили для бургер-меню в активном состоянии (если нужно для анимации) */
+.burger-menu.open .burger-icon:nth-child(1) {
+  transform: translateY(8px) rotate(45deg); /* Первая полоса становится наклонной */
+}
+
+.burger-menu.open .burger-icon:nth-child(2) {
+  opacity: 0; /* Вторая полоса исчезает */
+}
+
+.burger-menu.open .burger-icon:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg); /* Третья полоса становится наклонной */
+}

@@ -1,0 +1,33 @@
+/* Сайдбар */
+.sidebar {
+  position: fixed; /* Фиксируем на экране */
+  top: 0; /* Закрепляем сверху экрана */
+  left: -250px; /* Начальная позиция слева (снаружи экрана) */
+  width: 250px; /* Ширина сайдбара */
+  height: 100vh; /* Высота 100% от экрана */
+  background-color: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+  color: white; /* Белый текст */
+  transition: left 0.3s ease; /* Плавный эффект выезда */
+  z-index: 1000; /* Сайдбар поверх всего контента */
+  text-align: center; /* Центрируем текст */
+}
+
+/* Когда сайдбар открыт */
+.sidebar.open {
+  left: 0; /* Выезжает на экран */
+}
+
+/* Навигация в сайдбаре */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px;
+}
+
+.sidebar nav ul li a {
+  color: white; /* Белые ссылки */
+  text-decoration: none; /* Без подчеркивания */
+}

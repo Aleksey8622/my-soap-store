@@ -1,8 +1,10 @@
+import React, { useState } from 'react';
+import './Home.css';  // Не забудьте добавить стили для компонента
+
 // src/App.jsx
-// src/App.jsx
-import { useState } from "react";  
-import Header from "./components/Header/Header";
-import Sidebar from "./components/Sidebar/Sidebar";
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 import "./App.css";
 
 function App() {
@@ -18,11 +20,12 @@ function App() {
       <Header toggleMenu={toggleMenu} />
       <Sidebar isOpen={isMenuOpen} />
       <main>
+        <h2>Welcome to My Website</h2>
+        <p>This is your content.</p>
       </main>
     </div>
   );
 }
 
 export default App;
-
 
